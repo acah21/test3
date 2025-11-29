@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1RujkFiHm0S20d5-VfyU4EzOmyWdmzt-n
 """
 
-!pip install streamlit pydeck
-
 import streamlit as st
 import pandas as pd
 import numpy as np

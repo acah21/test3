@@ -10,7 +10,6 @@ Original file is located at
 # -*- coding: utf-8 -*-
 """dashboard_gunung_no_level"""
 
-!pip install streamlit pydeck
 
 # ===============================
 # 1️⃣ Import Library

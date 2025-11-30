@@ -11,6 +11,28 @@ from modeling_gunung import recommend
 st.set_page_config(page_title="Mount Jawa", layout="wide")
 
 # ==================================
+# CSS Tombol Google Maps (DITAMBAHKAN)
+# ==================================
+st.markdown("""
+<style>
+.map-button {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #4285F4;
+    color: white !important;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #3367D6;
+    transition: 0.2s;
+}
+.map-button:hover {
+    background-color: #3367D6;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# ==================================
 # CSS untuk dua halaman
 # ==================================
 homepage_bg = """
@@ -113,11 +135,14 @@ elif st.session_state.page == "result":
             st.markdown(f"- **Durasi:** {row.get('hiking_duration_hours', 'N/A')} jam")
             st.markdown(f"- **Recommend For:** {row.get('recommended_for', 'N/A')}")
 
-            # Maps
+            # Maps (TOMBOL KOTAK DITAMBAHKAN DI SINI)
             lat, lon = row.get("Latitude"), row.get("Longitude")
             if lat and lon:
                 maps_url = f"https://www.google.com/maps/search/?api=1&query={lat},{lon}"
-                st.markdown(f"[📍 Lihat di Google Maps]({maps_url})")
+                st.markdown(
+                    f'<a class="map-button" href="{maps_url}" target="_blank">📍 Lihat di Google Maps</a>',
+                    unsafe_allow_html=True
+                )
 
             st.markdown("---")
 

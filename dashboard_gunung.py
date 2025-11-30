@@ -35,10 +35,11 @@ st.markdown("""
 # ==================================
 # CSS untuk dua halaman
 # ==================================
+
 homepage_bg = """
 <style>
 [data-testid="stAppViewContainer"] {
-    background-image: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+    background-image: url('https://raw.githubusercontent.com/acah21/test3/3c6e1ac5d34c1efc2b113c0c99113b05c4152e6f/background_gunung.jpeg');
     background-size: cover;
     background-position: center;
 }

@@ -65,9 +65,3 @@ if st.sidebar.button("Tampilkan Rekomendasi"):
                 st.markdown(f"[🔗 Lihat Rute di Google Maps]({maps_url})")
             
             st.markdown("---")  # garis pemisah antar rekomendasi
-
-# ===============================
-# 6️⃣ Footer Info
-# ===============================
-st.sidebar.markdown("💡 Sistem menggunakan metode Content-Based Filtering + MLP")
-st.sidebar.markdown("📂 Pastikan dataset dan folder images berada di lokasi yang sama dengan notebook")
